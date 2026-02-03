@@ -30,21 +30,21 @@ Similarily to a choice-based game, the player encounters up to 5 choices and var
 
 ## Assets
 
-start-screen.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
-start-screen2.PNG - an image of a bus alternative illustrated by Andreea McKague on Adobe Fresco
-choice1.PNG - an image of a girl and a 5:00AM clock by Andreea McKague on Adobe Fresco
-choice1-2.PNG - an image of a girl and a 5:00AM clock by Andreea McKague on Adobe Fresco
-choice1-result1.PNG - a POV image of a phone with hands hold it by Andreea McKague on Adobe Fresco
-choice2.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
-choice2-result1.PNG - an image of a PRESTO card illustrated by Andreea McKague on Adobe Fresco
-choice2-result2.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
-choice3.PNG - an image of the interior of a GO bus illustrated by Andreea McKague on Adobe Fresco
-choice3-result1.PNG - a POV image of someone holding their smartphone illustrated by Andreea McKague on Adobe Fresco
-choice3-result2.PNG - an image of a bus arriving to the city of Waterloo illustrated by Andreea McKague on Adobe Fresco
-choice4.PNG - an image of a WATCARD with a girl named Jane Doe on it illustrated by Andreea McKague on Adobe Fresco
-choice4-result1.PNG - an image of an angry bus driver stopping you illustrated by Andreea McKague on Adobe Fresco
-choice4-result2.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
-choice5-result2.PNG - an image of a bus in he city of Stratford illustrated by Andreea McKague on Adobe Fresco
+- start-screen.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
+- start-screen2.PNG - an image of a bus alternative illustrated by Andreea McKague on Adobe Fresco
+- choice1.PNG - an image of a girl and a 5:00AM clock by Andreea McKague on Adobe Fresco
+- choice1-2.PNG - an image of a girl and a 5:00AM clock by Andreea McKague on Adobe Fresco
+- choice1-result1.PNG - a POV image of a phone with hands hold it by Andreea McKague on Adobe Fresco
+- choice2.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
+- choice2-result1.PNG - an image of a PRESTO card illustrated by Andreea McKague on Adobe Fresco
+- choice2-result2.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
+- choice3.PNG - an image of the interior of a GO bus illustrated by Andreea McKague on Adobe Fresco
+- choice3-result1.PNG - a POV image of someone holding their smartphone illustrated by Andreea McKague on Adobe Fresco
+- choice3-result2.PNG - an image of a bus arriving to the city of Waterloo illustrated by Andreea McKague on Adobe Fresco
+- choice4.PNG - an image of a WATCARD with a girl named Jane Doe on it illustrated by Andreea McKague on Adobe Fresco
+- choice4-result1.PNG - an image of an angry bus driver stopping you illustrated by Andreea McKague on Adobe Fresco
+- choice4-result2.PNG - an image of a bus illustrated by Andreea McKague on Adobe Fresco
+- choice5-result2.PNG - an image of a bus in he city of Stratford illustrated by Andreea McKague on Adobe Fresco
 
 ---
 
