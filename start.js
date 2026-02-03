@@ -12,13 +12,17 @@
 // currentScreen === "start"
 function drawStart() {
   // Background colour for the start screen
-  background(180, 225, 220); // soft teal background
+  background(startBg); // soft teal background
 
   // ---- Title text ----
-  fill(30, 50, 60);
-  textSize(46);
+  fill(254);
+  textFont("Playpen Sans");
+  textSize(74);
   textAlign(CENTER, CENTER);
-  text("Win or Lose", width / 2, 180);
+  text("LAST CALL", width / 2, 152);
+
+  textSize(16);
+  text("A COMMUTER SIMULATOR", width / 2, 200); // Andreea added manually
 
   // ---- Buttons (data only) ----
   // These objects store the position/size/label for each button.
@@ -26,17 +30,17 @@ function drawStart() {
   // and also reuse the same information for hover checks.
   const startBtn = {
     x: width / 2,
-    y: 320,
-    w: 240,
-    h: 80,
+    y: 560, // Andreea changed manually
+    w: 290,
+    h: 52,
     label: "START",
   };
 
   const instrBtn = {
     x: width / 2,
-    y: 430,
-    w: 240,
-    h: 80,
+    y: 620, // Andreea changed manually
+    w: 290,
+    h: 52,
     label: "INSTRUCTIONS",
   };
 
@@ -57,12 +61,12 @@ function drawStart() {
 // Called from main.js only when currentScreen === "start"
 function startMousePressed() {
   // For input checks, we only need x,y,w,h (label is optional)
-  const startBtn = { x: width / 2, y: 320, w: 240, h: 80 };
-  const instrBtn = { x: width / 2, y: 430, w: 240, h: 80 };
+  const startBtn = { x: width / 2, y: 560, w: 290, h: 52 };
+  const instrBtn = { x: width / 2, y: 620, w: 290, h: 52 };
 
-  // If START is clicked, go to the game screen
+  // If START is clicked, go to the choice1 screen
   if (isHover(startBtn)) {
-    currentScreen = "game";
+    currentScreen = "choice1";
   }
   // If INSTRUCTIONS is clicked, go to the instructions screen
   else if (isHover(instrBtn)) {
@@ -78,7 +82,7 @@ function startMousePressed() {
 // - I opens instructions
 function startKeyPressed() {
   if (keyCode === ENTER) {
-    currentScreen = "game";
+    currentScreen = "choice1";
   }
 
   if (key === "i" || key === "I") {
@@ -110,28 +114,22 @@ function drawButton({ x, y, w, h, label }) {
   // We also add a shadow using drawingContext (p5 lets you access the
   // underlying canvas context for effects like shadows).
   if (hover) {
-    fill(255, 200, 150, 220); // warm coral on hover
-
-    // Shadow settings (only when hovered)
-    drawingContext.shadowBlur = 20;
-    drawingContext.shadowColor = color(255, 180, 120);
+    fill(255, 255, 255, 180); // more opaque on hover
   } else {
-    fill(255, 240, 210, 210); // soft cream base
-
-    // Softer shadow when not hovered
-    drawingContext.shadowBlur = 8;
-    drawingContext.shadowColor = color(220, 220, 220);
+    fill(255, 255, 255, 140); // semi-transparent white
   }
 
-  // Draw the rounded rectangle button
-  rect(x, y, w, h, 14);
+  // Very thin outer white stroke
+  stroke(254, 254, 254);
+  strokeWeight(1.5);
 
-  // Important: reset shadow so it does not affect other drawings
-  drawingContext.shadowBlur = 0;
+  rect(x, y, w, h);
 
-  // Draw the label text on top of the button
-  fill(40, 60, 70);
-  textSize(28);
+  // Draw the label text - dark navy for high contrast
+  noStroke();
+  fill(15, 35, 80);
+  textSize(17);
+  textStyle(BOLD);
   textAlign(CENTER, CENTER);
   text(label, x, y);
 }

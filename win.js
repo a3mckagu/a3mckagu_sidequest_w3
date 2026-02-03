@@ -15,14 +15,14 @@
 // only when currentScreen === "win"
 function drawWin() {
   // Green-tinted background to communicate success
-  background(200, 255, 200);
+  background(bgChoice5Result2);
 
   fill(0);
   textAlign(CENTER, CENTER);
 
   // Main success message
   textSize(40);
-  text("You Win!", width / 2, 300);
+  text("You Made it to Class!", width / 2, 300);
 
   // Instruction text
   textSize(20);

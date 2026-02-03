@@ -28,7 +28,34 @@ let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
 // ------------------------------
 // This is where you usually set canvas size and initial settings.
 function setup() {
-  createCanvas(800, 800);
+  //edited without GenAI
+  startBg = loadImage("assets/start-screen."); //loading image
+  startBgv2 = loadImage("assets/start-screen2.PNG"); //loading image animation alternative
+
+  bgChoice1 = loadImage("assets/choice1.PNG"); //first choice = waking up sequence
+  bgChoice1v2 = loadImage("assets/choice1-2.PNG"); //first choice animation alternative
+
+  bgChoice1Result1 = loadImage("assets/choice1-result1.PNG"); // checking phone
+
+  bgChoice2 = loadImage("assets/choice2.PNG"); //catching the bus
+
+  bgChoice2Result1 = loadImage("assets/choice2-result1.PNG"); // pay with PRESTO
+  bgChoice2Result2 = loadImage("assets/choice2-result2.PNG"); // angry bus driver due to not paying
+
+  bgChoice3 = loadImage("assets/choice3.PNG"); //sitting on the bus
+
+  bgChoice3Result1 = loadImage("assets/choice3-result1.PNG"); // checking phone
+  bgChoice3Result2 = loadImage("assets/choice3-result2.PNG"); // looking out window
+
+  bgChoice4 = loadImage("assets/choice4.PNG"); // getting off the bus
+  bgChoice4Result1 = loadImage("assets/choice4-result1.PNG"); // scan WATCARD
+  bgChoice4Result2 = loadImage("assets/choice4-result2.PNG"); // angry bus driver due to not scanning WATCARD
+
+  bgChoice5 = loadImage("assets/choice5.PNG"); // sitting on second bus of the day
+  bgChoice5Result1 = loadImage("assets/choice5-result1.PNG"); // checking phone
+  bgChoice5Result2 = loadImage("assets/choice5-result2.PNG"); // looking out window
+
+  createCanvas(656, 800);
 
   // Sets a default font for all text() calls
   // (This can be changed later per-screen if you want.)
@@ -44,12 +71,37 @@ function draw() {
   // Each screen file defines its own draw function:
   //   start.js         → drawStart()
   //   instructions.js  → drawInstr()
+  //   choice1.js          → drawChoice1()
   //   game.js          → drawGame()
   //   win.js           → drawWin()
   //   lose.js          → drawLose()
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
+  else if (currentScreen === "choice1")
+    drawChoice1(); // Andreea added choice1 screen
+  else if (currentScreen === "choice1Result1")
+    drawChoice1Result1(); // Andreea added choice1 screen
+  else if (currentScreen === "choice2")
+    drawChoice2(); // Andreea added choice1 screen
+  else if (currentScreen === "choice2Result1")
+    drawChoice2Result1(); // Andreea added choice1 screen
+  else if (currentScreen === "choice2Result2")
+    drawChoice2Result2(); // Andreea added choice1 screen
+  else if (currentScreen === "choice3")
+    drawChoice3(); // Andreea added choice3 screen
+  else if (currentScreen === "choice3Result1")
+    drawChoice3Result1(); // Andreea added choice1 screen
+  else if (currentScreen === "choice3Result2")
+    drawChoice3Result2(); // Andreea added choice1 screen
+  else if (currentScreen === "choice4")
+    drawChoice4(); // Andreea added choice4 screen
+  else if (currentScreen === "choice4Result1")
+    drawChoice4Result1(); // Andreea added choice1 screen
+  else if (currentScreen === "choice4Result2")
+    drawChoice4Result2(); // Andreea added choice1 screen
+  else if (currentScreen === "choice5")
+    drawChoice5(); // Andreea added choice5 screen
   else if (currentScreen === "game") drawGame();
   else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
@@ -75,6 +127,18 @@ function mousePressed() {
 
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "instr") instrMousePressed();
+  else if (currentScreen === "choice1") choice1MousePressed();
+  else if (currentScreen === "choice1Result1") choice1Result1MousePressed();
+  else if (currentScreen === "choice2") choice2MousePressed();
+  else if (currentScreen === "choice2Result1") choice2Result1MousePressed();
+  else if (currentScreen === "choice2Result2") choice2Result2MousePressed();
+  else if (currentScreen === "choice3") choice3MousePressed();
+  else if (currentScreen === "choice3Result1") choice3Result1MousePressed();
+  else if (currentScreen === "choice3Result2") choice3Result2MousePressed();
+  else if (currentScreen === "choice4") choice4MousePressed();
+  else if (currentScreen === "choice4Result1") choice4Result1MousePressed();
+  else if (currentScreen === "choice4Result2") choice4Result2MousePressed();
+  else if (currentScreen === "choice5") choice5MousePressed();
   else if (currentScreen === "game") gameMousePressed();
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
@@ -97,6 +161,18 @@ function keyPressed() {
   if (currentScreen === "start") startKeyPressed();
   else if (currentScreen === "instr") instrKeyPressed();
   else if (currentScreen === "game") gameKeyPressed?.();
+  else if (currentScreen === "choice1") choice1KeyPressed();
+  else if (currentScreen === "choice1Result1") choice1Result1KeyPressed();
+  else if (currentScreen === "choice2") choice2KeyPressed();
+  else if (currentScreen === "choice2Result1") choice2Result1KeyPressed();
+  else if (currentScreen === "choice2Result2") choice2Result2KeyPressed();
+  else if (currentScreen === "choice3") choice3KeyPressed();
+  else if (currentScreen === "choice3Result1") choice3Result1KeyPressed();
+  else if (currentScreen === "choice3Result2") choice3Result2KeyPressed();
+  else if (currentScreen === "choice4") choice4KeyPressed();
+  else if (currentScreen === "choice4Result1") choice4Result1KeyPressed();
+  else if (currentScreen === "choice4Result2") choice4Result2KeyPressed();
+  else if (currentScreen === "choice5") choice5KeyPressed();
   else if (currentScreen === "win") winKeyPressed?.();
   else if (currentScreen === "lose") loseKeyPressed?.();
 }
