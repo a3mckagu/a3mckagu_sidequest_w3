@@ -12,7 +12,7 @@
 // currentScreen === "start"
 function drawStart() {
   // Background colour for the start screen
-  background(startBg); // soft teal background
+  background(startBg); // image of bg bus
 
   // ---- Title text ----
   fill(254);
