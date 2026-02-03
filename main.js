@@ -29,7 +29,7 @@ let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
 // This is where you usually set canvas size and initial settings.
 function setup() {
   //edited without GenAI
-  startBg = loadImage("assets/start-screen."); //loading image
+  startBg = loadImage("assets/start-screen.PNG"); //loading image
   startBgv2 = loadImage("assets/start-screen2.PNG"); //loading image animation alternative
 
   bgChoice1 = loadImage("assets/choice1.PNG"); //first choice = waking up sequence
